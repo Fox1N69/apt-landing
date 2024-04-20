@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header/Header.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<Header />
+
+		<section id="banner">
+			<div class="title">
+				<h1>Компания</h1>
+				<h1>"Альянс перспективных технологий"</h1>
+			</div>
+			<p class="description">
+				объединила под своим началом настоящих профессионалов в своей области.
+				Команда специалистов занимается автоматизацией бизнес-процессов за счет
+				внедрения в повседневную работу современных инновационных решений.
+				Удачно подобранный кадровый состав позволяет решать проблемы различного
+				уровня сложности, среди них самая главная – делать сложные и непонятные
+				вещи максимально понятными и доступными на интуитивном уровне.
+			</p>
+		</section>
+	</main>
+</Layout>
+
+<style lang="scss">
+	main {
+		max-width: 100%;
+		font-size: 20px;
+	}
+
+	#banner {
+		height: 100vh;
+		background: url("/banner.png");
+	}
+</style>
