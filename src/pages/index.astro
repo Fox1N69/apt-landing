@@ -8,18 +8,21 @@ import Header from "../components/Header/Header.astro";
 		<Header />
 
 		<section id="banner">
-			<div class="title">
-				<h1>Компания</h1>
-				<h1>"Альянс перспективных технологий"</h1>
+			<div class="banner__content">
+				<div class="title">
+					<h1>Компания</h1>
+					<h1>"Альянс перспективных технологий"</h1>
+				</div>
+				<p class="description">
+					объединила под своим началом настоящих профессионалов в своей области.
+					Команда специалистов занимается автоматизацией бизнес-процессов за
+					счет внедрения в повседневную работу современных инновационных
+					решений. Удачно подобранный кадровый состав позволяет решать проблемы
+					различного уровня сложности, среди них самая главная – делать сложные
+					и непонятные вещи максимально понятными и доступными на интуитивном
+					уровне.
+				</p>
 			</div>
-			<p class="description">
-				объединила под своим началом настоящих профессионалов в своей области.
-				Команда специалистов занимается автоматизацией бизнес-процессов за счет
-				внедрения в повседневную работу современных инновационных решений.
-				Удачно подобранный кадровый состав позволяет решать проблемы различного
-				уровня сложности, среди них самая главная – делать сложные и непонятные
-				вещи максимально понятными и доступными на интуитивном уровне.
-			</p>
 		</section>
 
 		<section id="About">
@@ -39,7 +42,6 @@ import Header from "../components/Header/Header.astro";
 					<img src="" alt="" />
 					<div class="card__description"></div>
 				</div>
-
 			</div>
 			<div class="about__description">Lorem ipsum dolor sit amet.</div>
 		</section>
@@ -53,7 +55,34 @@ import Header from "../components/Header/Header.astro";
 	}
 
 	#banner {
-		height: 100vh;
-		background: url("/banner.png");
+		height: 659px;
+		width: 100%;
+		background-image: url("/banner.png");
+		background-size: 1400px 659px;
+
+		padding: 120px 0 127px 113px;
+	}
+
+	.banner__content {
+		color: white;
+		display: flex;
+		flex-direction: column;
+		gap: 22px;
+
+		.title {
+			font-family: var(--second-family);
+			font-weight: 700;
+			font-size: 42px;
+			line-height: 140%;
+			background: linear-gradient(
+				139deg,
+				#009b8d 12%,
+				#1c7e6b 52.5%,
+				#4ab9a3 97.14%
+			);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
 	}
 </style>
