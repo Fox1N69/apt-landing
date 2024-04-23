@@ -18,6 +18,8 @@
     height: 154px;
     display: flex;
     justify-content: space-between;
+
+    padding: 0 138px;
   }
 
   .logo {
@@ -29,5 +31,34 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    .number {
+      color: rgb(255, 255, 255);
+      font-family: var(--second-family);
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 55px;
+      letter-spacing: 0%;
+      text-align: right;
+    }
+
+    .email {
+      background: linear-gradient(
+        138.65deg,
+        rgb(0, 155, 141),
+        rgb(28, 126, 107),
+        rgb(74, 185, 163)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      font-family: var(--second-family);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0%;
+      text-align: right;
+    }
   }
 </style>

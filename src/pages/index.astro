@@ -3,62 +3,57 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header/Header.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="ООО'Альянс перспективных технологи'">
 	<main>
-		<Header />
-
-		<section id="banner">
-			<div class="banner__content">
-				<div class="title">
-					<h1>Компания</h1>
-					<h1>"Альянс перспективных технологий"</h1>
+			<Header />
+			<section id="banner">
+				<div class="banner__content">
+					<div class="title">
+						<h1>Компания</h1>
+						<h1>"Альянс перспективных технологий"</h1>
+					</div>
+					<p class="description">
+						объединила под своим началом настоящих профессионалов в своей области.
+						Команда специалистов занимается автоматизацией бизнес-процессов за
+						счет внедрения в повседневную работу современных инновационных
+						решений. Удачно подобранный кадровый состав позволяет решать проблемы
+						различного уровня сложности, среди них самая главная – делать сложные
+						и непонятные вещи максимально понятными и доступными на интуитивном
+						уровне.
+					</p>
 				</div>
-				<p class="description">
-					объединила под своим началом настоящих профессионалов в своей области.
-					Команда специалистов занимается автоматизацией бизнес-процессов за
-					счет внедрения в повседневную работу современных инновационных
-					решений. Удачно подобранный кадровый состав позволяет решать проблемы
-					различного уровня сложности, среди них самая главная – делать сложные
-					и непонятные вещи максимально понятными и доступными на интуитивном
-					уровне.
-				</p>
-			</div>
-		</section>
-
-		<section id="About">
-			<h2 class="about__title">Lorem ipsum dolor sit amet.</h2>
-			<div class="about__cards">
-				<div class="card">
-					<img src="" alt="" />
-					<div class="card__description"></div>
+			</section>
+			<section id="About">
+				<h2 class="about__title">Lorem ipsum dolor sit amet.</h2>
+				<div class="about__cards">
+					<div class="card">
+						<img src="" alt="" />
+						<div class="card__description"></div>
+					</div>
+					<div class="card">
+						<img src="" alt="" />
+						<div class="card__description"></div>
+					</div>
+					<div class="card">
+						<img src="" alt="" />
+						<div class="card__description"></div>
+					</div>
 				</div>
-
-				<div class="card">
-					<img src="" alt="" />
-					<div class="card__description"></div>
-				</div>
-
-				<div class="card">
-					<img src="" alt="" />
-					<div class="card__description"></div>
-				</div>
-			</div>
-			<div class="about__description">Lorem ipsum dolor sit amet.</div>
-		</section>
+				<div class="about__description">Lorem ipsum dolor sit amet.</div>
+			</section>
 	</main>
 </Layout>
 
 <style lang="scss">
 	main {
 		max-width: 100%;
-		font-size: 20px;
 	}
 
 	#banner {
 		height: 659px;
 		width: 100%;
-		background-image: url("/banner.png");
-		background-size: 1400px 659px;
+		background-image: url("/banner-fhd.png");
+		background-size: cover;
 
 		padding: 120px 0 127px 113px;
 	}
