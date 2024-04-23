@@ -18,6 +18,7 @@
     height: 154px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     padding: 0 138px;
   }
@@ -28,11 +29,14 @@
   }
 
   .contacts {
+    width: 280px;
+
     display: flex;
     flex-direction: column;
     gap: 5px;
 
     .number {
+      align-self: flex-start;
       color: rgb(255, 255, 255);
       font-family: var(--second-family);
       font-size: 30px;
@@ -43,6 +47,8 @@
     }
 
     .email {
+      align-self: flex-end;
+
       background: linear-gradient(
         138.65deg,
         rgb(0, 155, 141),

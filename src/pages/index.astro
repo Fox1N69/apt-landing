@@ -1,46 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header/Header.astro";
+import About from "@components/About/About.astro";
 ---
 
 <Layout title="ООО'Альянс перспективных технологи'">
 	<main>
-			<Header />
-			<section id="banner">
-				<div class="banner__content">
-					<div class="title">
-						<h1>Компания</h1>
-						<h1>"Альянс перспективных технологий"</h1>
-					</div>
-					<p class="description">
-						объединила под своим началом настоящих профессионалов в своей области.
-						Команда специалистов занимается автоматизацией бизнес-процессов за
-						счет внедрения в повседневную работу современных инновационных
-						решений. Удачно подобранный кадровый состав позволяет решать проблемы
-						различного уровня сложности, среди них самая главная – делать сложные
-						и непонятные вещи максимально понятными и доступными на интуитивном
-						уровне.
-					</p>
-				</div>
-			</section>
-			<section id="About">
-				<h2 class="about__title">Lorem ipsum dolor sit amet.</h2>
-				<div class="about__cards">
-					<div class="card">
-						<img src="" alt="" />
-						<div class="card__description"></div>
-					</div>
-					<div class="card">
-						<img src="" alt="" />
-						<div class="card__description"></div>
-					</div>
-					<div class="card">
-						<img src="" alt="" />
-						<div class="card__description"></div>
-					</div>
-				</div>
-				<div class="about__description">Lorem ipsum dolor sit amet.</div>
-			</section>
+		<Header />
+		<section id="banner">
+			<div class="banner__content">
+				<h1 class="title">Компания <br /> «Альянс перспективных технологий»</h1>
+				<p class="description">
+					объединила под своим началом настоящих профессионалов в своей области.
+					Команда специалистов занимается автоматизацией бизнес-процессов за
+					счет внедрения в повседневную работу современных инновационных
+					решений. Удачно подобранный кадровый состав позволяет решать проблемы
+					различного уровня сложности, среди них самая главная – делать сложные
+					и непонятные вещи максимально понятными и доступными на интуитивном
+					уровне.
+				</p>
+			</div>
+		</section>
+		<About />
 	</main>
 </Layout>
 
@@ -59,25 +40,40 @@ import Header from "../components/Header/Header.astro";
 	}
 
 	.banner__content {
+		max-width: 1075.2px;
+		height: 198px;
+
 		color: white;
 		display: flex;
 		flex-direction: column;
 		gap: 22px;
 
 		.title {
-			font-family: var(--second-family);
-			font-weight: 700;
-			font-size: 42px;
-			line-height: 140%;
 			background: linear-gradient(
-				139deg,
-				#009b8d 12%,
-				#1c7e6b 52.5%,
-				#4ab9a3 97.14%
+				138.65deg,
+				rgb(0, 155, 141),
+				rgb(28, 126, 107),
+				rgb(74, 185, 163)
 			);
-			background-clip: text;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+			font-family: "Graphik";
+			font-size: 60px;
+			line-height: 66px;
+			letter-spacing: 0%;
+			text-align: left;
+		}
+
+		.description {
+			color: rgb(255, 255, 255);
+			font-family: "ProximaNova";
+			font-size: 22px;
+			font-weight: 400;
+			line-height: 32px;
+			letter-spacing: 0%;
+			text-align: left;
 		}
 	}
 </style>
