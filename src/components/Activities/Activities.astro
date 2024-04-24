@@ -1,0 +1,123 @@
+---
+
+---
+
+<section id="activities">
+  <h2 class="activities__title">
+    Основные направления деятельности компании «Альянс перспективных технологий»
+    - это разработка:
+  </h2>
+  <div class="activities__cards">
+    <div class="card">
+      <img src="/lumen.png" alt="" />
+      <div class="card__description">
+        виртуальных тренажеров, а точнее интерактивных обучающих симуляторов,
+        призванных обучать персонал выполнять те или иные бизнес задачи на
+        высоком операционном уровне;
+      </div>
+    </div>
+    <div class="card">
+      <img src="/formula.png" alt="" />
+      <div class="card__description">
+        интеллектуальных систем на базе нейронных сетей, которые призваны
+        помогать вашим сотрудникам в процессе сбора, анализа данных с целью
+        прогнозирования развития ситуаций в будущем;
+      </div>
+    </div>
+    <div class="card">
+      <img src="/phone.png" alt="" />
+      <div class="card__description">
+        удобных и многофункциональных мобильных приложений на базе двух
+        популярных операционных систем согласно Техническому заданию,
+        полученному от заказчика.
+      </div>
+    </div>
+  </div>
+  <div class="activities__description">
+    Внедрение наших продуктов позволяет компаниям оптимизировать свои накладные
+    расходы за счет уменьшения статьи по обучению сотрудников. Экономия может
+    достигать внушительных 3-5 тысяч на каждого работника, что в рамках крупных
+    холдингов или концернов ведет к серьезной экономии средств.
+  </div>
+</section>
+
+<style lang="scss" scoped>
+  #activities {
+    height: 781px;
+    margin: 54px 154px 0 154px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+  }
+
+  .activities__title {
+    max-width: 1272px;
+
+    background: linear-gradient(
+      138.65deg,
+      rgb(0, 155, 141),
+      rgb(28, 126, 107),
+      rgb(74, 185, 163)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: "Graphik";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  .activities__cards {
+    height: 368px;
+
+    display: flex;
+    gap: 190px;
+
+    .card {
+      max-width: 400px;
+      padding: 38px 32px;
+      color: #fff;
+
+      img {
+        max-width: 82px;
+        height: 82px;
+        margin-bottom: 17px;
+      }
+
+      border: 1px solid rgb(0, 155, 141);
+      border-radius: 20px;
+
+      background: rgb(28, 28, 28);
+    }
+  }
+
+  .card__description {
+    max-width: 350px;
+
+    color: rgb(255, 255, 255);
+    font-family: "ProximaNova";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  .activities__description {
+    max-width: 1180px;
+    margin-top: 42px;
+
+    color: rgb(255, 255, 255);
+    font-family: 'ProximaNova';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+</style>
