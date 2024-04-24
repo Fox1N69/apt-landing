@@ -2,3 +2,82 @@
 
 ---
 
+<section id="principles">
+  <h1 class="princ__title">
+    В своей работе мы придерживаемся следующих принципов:
+  </h1>
+
+  <div class="princ__cards">
+    <div class="card">
+      <img src="" alt="" />
+      <div class="card__text"></div>
+    </div>
+
+    <div class="card">
+      <img src="" alt="" />
+      <div class="card__text"></div>
+    </div>
+
+    <div class="card">
+      <img src="" alt="" />
+      <div class="card__text"></div>
+    </div>
+
+    <div class="card">
+      <img src="" alt="" />
+      <div class="card__text"></div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss" scoped>
+  #principles {
+    height: 849px;
+    background: url("/principles_banner.png");
+
+    padding: 54px 151px 0 158px;
+  }
+
+  .princ__title {
+    background: linear-gradient(
+      138.65deg,
+      rgb(0, 155, 141),
+      rgb(28, 126, 107),
+      rgb(74, 185, 163)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: "Graphik";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  .princ__cards {
+    display: grid;
+    grid-template-columns: 700px 700px;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 211px;
+    grid-row-gap: 30px;
+
+    margin-top: 39px;
+
+    .card {
+      width: 700px;
+      height: 271px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      border: 1px solid rgb(0, 155, 141);
+      border-radius: 20px;
+
+      background: rgb(28, 28, 28);
+    }
+  }
+</style>
