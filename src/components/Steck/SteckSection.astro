@@ -10,26 +10,92 @@
 
   <ul class="capabilities__list">
     <li class="card">
-      <img src="" alt="">
-      <div class="card__text"></div>
+      <img src="" alt="" />
+      <div class="card__text">Бизнес-системы</div>
     </li>
-   
+
     <li class="card">
-      <img src="" alt="">
-      <div class="card__text"></div>
+      <img src="" alt="" />
+      <div class="card__text">Игры</div>
+    </li>
+
+    <li class="card">
+      <img src="" alt="" />
+      <div class="card__text">Мобильные приложения</div>
+    </li>
+
+    <li class="card">
+      <img src="" alt="" />
+      <div class="card__text">Дизайн</div>
+    </li>
+
+    <li class="card">
+      <img src="" alt="" />
+      <div class="card__text">UI/UX</div>
+    </li>
+
+    <li class="card">
+      <img src="" alt="" />
+      <div class="card__text">3D-моделирование</div>
+    </li>
+
+    <li class="card">
+      <img src="" alt="" />
+      <div class="card__text">VR-и AR- приложения</div>
     </li>
   </ul>
+
+  <h3>Стек технологий:</h3>
 </section>
 
-<style lang="scss" scoped> 
+<style lang="scss" scoped>
   #steck {
     width: 100%;
     height: 659px;
 
-    padding: 54 auto;
+    padding: 54px 154px;
   }
 
-  .steck {
-    
+  .steck__title {
+    background: linear-gradient(
+      138.65deg,
+      rgb(0, 155, 141),
+      rgb(28, 126, 107),
+      rgb(74, 185, 163)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: "Graphik";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  .capabilities__list {
+    list-style: none;
+    color: white;
+
+    margin-top: 40px;
+    display: flex;
+    gap: 57px;
+
+    .card {
+      width: 175px;
+      height: 159px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      border: 1px solid white;
+      border-radius: 10px;
+
+      background: #1c1c1c;
+      border: 1px solid rgb(0, 155, 141);
+    }
   }
 </style>
