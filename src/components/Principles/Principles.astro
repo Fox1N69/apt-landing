@@ -7,24 +7,28 @@
     В своей работе мы придерживаемся следующих принципов:
   </h1>
 
-  //1 card
   <div class="princ__cards">
+    <!-- card l1 -->
     <div class="card">
-      <img src="" alt="" />
+      <img src="princ1.png" alt="" />
       <div class="card__text">
         создаются только те продукты, которые будут приносить реальную
         практическую пользу компаниям и их сотрудникам;
       </div>
     </div>
 
+    <!-- card r1 -->
     <div class="card">
-      <img src="" alt="" />
-      <div class="card__text"></div>
+      <img src="princ3.png" alt="" />
+      <div class="card__text">
+        понимание конечного пользователя, его болевых точек и целей, которые он
+        хочет достичь за счет использования наших продуктов;
+      </div>
     </div>
 
-    //2 card
+    <!-- card l2 -->
     <div class="card">
-      <img src="" alt="" />
+      <img src="princ2.png" alt="" />
       <div class="card__text">
         понимание области, в которой идут разработки. Специалисты имеют большой
         практический опыт, что позволяет погрузиться в решение поставленной
@@ -32,9 +36,13 @@
       </div>
     </div>
 
+    <!-- card r2 -->
     <div class="card">
-      <img src="" alt="" />
-      <div class="card__text"></div>
+      <img src="princ4.png" alt="principles icon handshake" />
+      <div class="card__text">
+        учет политики заказчиков в области информационной и производственной
+        безопасности, что для многих клиентов ставится во главу угла.
+      </div>
     </div>
   </div>
 </section>
@@ -68,7 +76,7 @@
 
   .princ__cards {
     display: grid;
-    grid-template-columns: 700px 700px;
+    grid-template-columns: auto auto;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 211px;
     grid-row-gap: 30px;
@@ -76,17 +84,34 @@
     margin-top: 39px;
 
     .card {
-      width: 700px;
+      max-width: 700px;
       height: 271px;
+
+      padding: 39px 0 62px 36px;
 
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 11px;
 
       border: 1px solid rgb(0, 155, 141);
       border-radius: 20px;
 
       background: rgb(28, 28, 28);
+
+      img {
+        height: 52px;
+        width: 52px;
+      }
+
+      .card__text {
+        color: rgb(255, 255, 255);
+        font-family: "Proxima";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
     }
   }
 </style>
