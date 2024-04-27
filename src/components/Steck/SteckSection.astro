@@ -10,42 +10,51 @@
 
   <ul class="capabilities__list">
     <li class="card">
-      <img src="" alt="" />
+      <img src="steck-icon.png" alt="" />
       <div class="card__text">Бизнес-системы</div>
     </li>
 
     <li class="card">
-      <img src="" alt="" />
+      <img src="steck-icon.png" alt="" />
       <div class="card__text">Игры</div>
     </li>
 
     <li class="card">
-      <img src="" alt="" />
+      <img src="steck-icon.png" alt="" />
       <div class="card__text">Мобильные приложения</div>
     </li>
 
     <li class="card">
-      <img src="" alt="" />
+      <img src="steck-icon.png" alt="" />
       <div class="card__text">Дизайн</div>
     </li>
 
     <li class="card">
-      <img src="" alt="" />
+      <img src="steck-icon.png" alt="" />
       <div class="card__text">UI/UX</div>
     </li>
 
     <li class="card">
-      <img src="" alt="" />
+      <img src="steck-icon.png" alt="" />
       <div class="card__text">3D-моделирование</div>
     </li>
 
     <li class="card">
-      <img src="" alt="" />
+      <img src="steck-icon.png" alt="" />
       <div class="card__text">VR-и AR- приложения</div>
     </li>
   </ul>
 
-  <h3>Стек технологий:</h3>
+  <h3 class="techsteck__title">Стек технологий:</h3>
+  <ul class="tech__list">
+    <li class="tech__card">Python (Django/PyTorch)</li>
+    <li class="tech__card">ReactJS</li>
+    <li class="tech__card">Vue</li>
+    <li class="tech__card">Swift</li>
+    <li class="tech__card">Kotlin</li>
+    <li class="tech__card">C++/UE5</li>
+    <li class="tech__card">WebGL</li>
+  </ul>
 </section>
 
 <style lang="scss" scoped>
@@ -83,6 +92,11 @@
     display: flex;
     gap: 57px;
 
+    img {
+      width: 43px;
+      height: 43px;
+    }
+
     .card {
       width: 175px;
       height: 159px;
@@ -90,12 +104,71 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
+      align-items: center;
+      justify-content: center;
 
       border: 1px solid white;
       border-radius: 10px;
 
       background: #1c1c1c;
       border: 1px solid rgb(0, 155, 141);
+    }
+
+    .card__text {
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .techsteck__title {
+    margin-top: 53px;
+
+    background: linear-gradient(
+      138.65deg,
+      rgb(0, 155, 141),
+      rgb(28, 126, 107),
+      rgb(74, 185, 163)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: "Grapthik";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  .tech__list {
+    margin-top: 41px;
+
+    list-style: none;
+    display: flex;
+    gap: 57px;
+
+    .tech__card {
+      width: 175px;
+      height: 98px;
+
+      border-radius: 10px;
+
+      background: linear-gradient(
+        138.65deg,
+        rgb(0, 155, 141) 8.425%,
+        rgb(28, 126, 107) 60.051%
+      );
+
+      align-content: center;
+      text-align: center;
+
+      color: rgb(255, 255, 255);
+      font-family: "Proxima";
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 26px;
+      letter-spacing: 0%;
     }
   }
 </style>
