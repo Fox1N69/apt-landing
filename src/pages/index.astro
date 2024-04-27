@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Activities from "@components/ActivitiesSection.astro";
-import About from "@components/AboutSection.astro";
-import Principles from "@components/PrinciplesSection.astro";
-import Steck from "@components/SteckSection.astro";
-import ProductSection from "@components/ProductSection.astro";
+import Header from "../components/Sections/Header.astro";
+import Activities from "@components/Sections/ActivitiesSection.astro";
+import About from "@components/Sections/AboutSection.astro";
+import Principles from "@components/Sections/PrinciplesSection.astro";
+import Steck from "@components/Sections/SteckSection.astro";
+import ProductSection from "@components/Sections/ProductSection.astro";
+import OtherSection from "@components/Sections/OtherSection.astro";
 ---
 
 <Layout title="ООО'Альянс перспективных технологи'">
@@ -30,6 +31,7 @@ import ProductSection from "@components/ProductSection.astro";
 		<Principles />
 		<Steck />
 		<ProductSection />
+		<OtherSection />
 	</main>
 </Layout>
 
