@@ -7,6 +7,7 @@ import Principles from "@components/Sections/PrinciplesSection.astro";
 import Steck from "@components/Sections/SteckSection.astro";
 import ProductSection from "@components/Sections/ProductSection.astro";
 import OtherSection from "@components/Sections/OtherSection.astro";
+import "animate.css";
 ---
 
 <Layout title="ООО'Альянс перспективных технологи'">
@@ -14,7 +15,9 @@ import OtherSection from "@components/Sections/OtherSection.astro";
 		<Header />
 		<section id="banner">
 			<div class="banner__content">
-				<h1 class="title">Компания <br /> «Альянс перспективных технологий»</h1>
+				<h1 class="title animate__animated animate__fadeInUp">
+					Компания <br /> «Альянс перспективных технологий»
+				</h1>
 				<p class="description">
 					объединила под своим началом настоящих профессионалов в своей области.
 					Команда специалистов занимается автоматизацией бизнес-процессов за
@@ -34,6 +37,16 @@ import OtherSection from "@components/Sections/OtherSection.astro";
 		<OtherSection />
 		<footer>
 			<div class="logo"><img src="/logo.png" alt="" /></div>
+			<div class="name">
+				<p></p>
+				<p></p>
+				<a href="">Политика_конфиденцальности</a>
+			</div>
+
+			<div class="addres">
+				<p></p>
+			</div>
+
 			<div class="contacts">
 				<div class="number">+7(926)9669169</div>
 				<div class="email">SIF@APT-IT.PRO</div>
@@ -101,5 +114,14 @@ import OtherSection from "@components/Sections/OtherSection.astro";
 		justify-content: space-between;
 
 		padding: 0 154px;
+		p {
+			color: rgb(255, 255, 255);
+			font-family: "Proxima";
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			letter-spacing: 0%;
+			text-align: left;
+		}
 	}
 </style>
