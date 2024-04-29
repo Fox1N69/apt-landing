@@ -1,8 +1,8 @@
 ---
-
+const { class: className, ...rest } = Astro.props;
 ---
 
-<header>
+<header class={className} {...rest}>
   <div class="logo"><img src="/logo.png" alt="" /></div>
   <div class="contacts">
     <div class="number">+7(926)9669169</div>
@@ -65,6 +65,40 @@
       line-height: 24px;
       letter-spacing: 0%;
       text-align: right;
+    }
+  }
+
+  @media (max-width: 600px) {
+    header { 
+      padding: 0 20px;
+      margin: 0;
+      height: 75px;
+    }
+
+    .logo {
+      width: 65px;
+      height: 65px;
+      
+      img {
+        width: 65px;
+        height: 65px;
+      }
+    }
+
+    .contacts {
+      flex-wrap: wrap;
+      align-content: flex-end;
+
+      .number {
+        font-size: 18px;
+        font-weight: 100;
+        line-height: 20px;
+      }
+
+      .email {
+        font-size: 12px;
+        font-weight: 200;
+      }
     }
   }
 </style>

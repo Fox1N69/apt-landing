@@ -12,7 +12,7 @@ import "animate.css";
 
 <Layout title="ООО'Альянс перспективных технологи'">
 	<main>
-		<Header />
+		<Header class="headers" />
 		<section id="banner">
 			<div class="banner__content">
 				<h1 class="title animate__animated animate__fadeInUp">
@@ -38,17 +38,17 @@ import "animate.css";
 		<footer>
 			<div class="logo"><img src="/logo.png" alt="" /></div>
 			<div class="name">
-				<p></p>
-				<p></p>
+				<p>ООО «Альянс Перспективных Технологий»</p>
+				<p>ИНН 7203569998</p>
 				<a href="">Политика_конфиденцальности</a>
 			</div>
 
 			<div class="addres">
-				<p></p>
+				<p>625033 г. Тюмень, <br /> ул. Константина Посьета, д. 9, оф.96</p>
 			</div>
 
 			<div class="contacts">
-				<div class="number">+7(926)9669169</div>
+				<div class="number">+7 (926) 966 91 69</div>
 				<div class="email">SIF@APT-IT.PRO</div>
 			</div>
 		</footer>
@@ -112,8 +112,11 @@ import "animate.css";
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
 
 		padding: 0 154px;
+		background: rgb(16, 16, 16);
+
 		p {
 			color: rgb(255, 255, 255);
 			font-family: "Proxima";
@@ -122,6 +125,62 @@ import "animate.css";
 			line-height: 24px;
 			letter-spacing: 0%;
 			text-align: left;
+		}
+
+		.contacts {
+			.number {
+				color: rgb(255, 255, 255);
+				font-family: "Graphik";
+				font-size: 24px;
+				font-weight: 500;
+				line-height: 55px;
+				letter-spacing: 0%;
+				text-align: left;
+			}
+			.email {
+				background: linear-gradient(
+					138.65deg,
+					rgb(0, 155, 141),
+					rgb(28, 126, 107),
+					rgb(74, 185, 163)
+				);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+				font-family: "Graphik";
+				font-size: 18px;
+				font-weight: 600;
+				line-height: 24px;
+				letter-spacing: 0%;
+				text-align: right;
+			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		#banner {
+			padding: 4.5% 20px; 
+			height: 300px;
+			background: url("banner-mobile.png");
+			background-size: cover;
+		}
+
+		.banner__content {
+			.title {
+				font-size: 30px;
+				line-height: 33px;
+			}
+
+			.description {
+				font-size: 11px;
+				line-height: 16px;
+			}
+			
+		}
+
+		footer {
+			display: none;
 		}
 	}
 </style>
