@@ -68,12 +68,6 @@
 </section>
 
 <style lang="scss" scoped>
-  @media (max-width: 600px) {
-    section {
-      display: none;
-    }
-  }
-  
   #aboutus {
     height: 1619px;
     padding: 0 154px;
@@ -129,6 +123,27 @@
         letter-spacing: 0%;
         text-align: left;
       }
+    }
+  }
+
+  @media (max-width: 600px) {
+    #aboutus {
+      padding: 0;
+    }
+
+    .about__title {
+      font-size: 27.5px;
+      line-height: 33px;
+      display: none;
+    }
+
+    .about__container {
+      display: none;
+      gap: 0;
+    }
+
+    .about__card {
+      display: none;
     }
   }
 </style>

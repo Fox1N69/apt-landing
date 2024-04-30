@@ -116,8 +116,23 @@
   }
 
   @media (max-width: 600px) {
-    section {
-      display: none;
+    #principles {
+      padding: 10px 20px;
+    }
+
+    .princ__title {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    .princ__cards {
+      display: flex;
+      flex-direction: column;
+
+      .card {
+        max-width: 400px;
+        padding-top: 19px;
+      }
     }
   }
 </style>

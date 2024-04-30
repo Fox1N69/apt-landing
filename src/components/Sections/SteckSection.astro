@@ -28,7 +28,6 @@
       <img src="steck-icon.png" alt="" />
       <div class="card__text">Дизайн</div>
     </li>
-
     <li class="card">
       <img src="steck-icon.png" alt="" />
       <div class="card__text">UI/UX</div>
@@ -41,7 +40,7 @@
 
     <li class="card">
       <img src="steck-icon.png" alt="" />
-      <div class="card__text">VR-и AR- приложения</div>
+      <div class="card__text" >VR-и AR- приложения</div>
     </li>
   </ul>
 
@@ -58,11 +57,6 @@
 </section>
 
 <style lang="scss" scoped>
-  @media (max-width: 600px) {
-    section {
-      display: none;
-    }
-  }
   #steck {
     width: 100%;
     height: 659px;
@@ -174,6 +168,36 @@
       font-weight: 700;
       line-height: 26px;
       letter-spacing: 0%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #steck {
+      padding: 10px 20px;
+      height: 100vh;
+    }
+
+    .steck__title {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    .capabilities__list {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto;
+    }
+
+    .techsteck__title {
+      font-size: 18px;
+
+      line-height: 23px;
+    }
+
+    .tech__list {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto;
     }
   }
 </style>
