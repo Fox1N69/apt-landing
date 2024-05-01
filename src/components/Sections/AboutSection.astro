@@ -8,16 +8,18 @@
     <div class="about__card">
       <div class="about__card-description">
         <p>
-          В продолжение работ по этой теме разработан тактический симулятор для
-          руководителей тушения пожаров, который позволяет отработать различные
-          сценарии развития событий во время ЧС.
+          Ядро компании «Альянс перспективных технологий» состоит из технических
+          специалистов, которые имеют внушительный практический опыт реализации
+          сложных продуктов в области промышленной безопасности.
         </p>
+        <br />
         <p>
           Одна из самых удачных разработок в которой мы принимали участие –
           виртуальный тренажер – симулятор ПТМ, который одобрен МЧС. С его
           помощью можно проводить противопожарные инструктажи во исполнение
           приказа 806 от 18.11.21 г.
         </p>
+        <br />
         <p>
           В продолжение работ по этой теме разработан тактический симулятор для
           руководителей тушения пожаров, который позволяет отработать различные
@@ -69,8 +71,10 @@
 
 <style lang="scss" scoped>
   #aboutus {
-    max-height: 1619px;
+    height: 1619px;
     padding: 0 154px;
+
+    background-color: #060606;
   }
 
   .about__title {
@@ -102,17 +106,16 @@
     max-width: 1607px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     gap: 41px;
 
     .about__card-description {
       max-width: 700px;
-      margin-top: 55px;
 
       color: white;
       display: flex;
       flex-direction: column;
       gap: 5px;
+
 
       p {
         color: rgb(255, 255, 255);
@@ -148,7 +151,6 @@
       flex-direction: column-reverse;
       gap: 20px;
 
-
       .about__card-description {
         display: flex;
         flex-direction: column;
@@ -177,6 +179,51 @@
           font-size: 14px;
           line-height: 18px;
         }
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    #aboutus {
+      height: 1619px;
+      padding: 53px 120px;
+    }
+
+    .about__card-rev {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 41px;
+
+      .about__card-description {
+        max-width: 700px;
+
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        p {
+          color: rgb(255, 255, 255);
+          font-family: "Proxima";
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: 0%;
+          text-align: left;
+        }
+      }
+
+      img {
+        width: 570px;
+        height: 430px;
+      }
+    }
+
+    .about__card {
+      img {
+        width: 570px;
+        height: 430px;
       }
     }
   }
