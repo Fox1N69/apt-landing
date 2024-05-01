@@ -6,10 +6,27 @@
   <div>
     <h2 class="product__title">Продукты</h2>
     <div class="product__text">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, iste
-      reprehenderit delectus qui dicta est aliquam a porro blanditiis aut,
-      ratione neque perferendis modi voluptatum praesentium, eum cupiditate
-      libero nisi.
+      <p>
+        Основной продукт компании «Альянс перспективных технологий», который
+        отлично себя зарекомендовал на производстве – это цифровая платформа
+        «Система управления рисками».
+      </p>
+      <br>
+      <p>
+        Это наша собственная разработка, которая предполагает оцифровку модели
+        предприятия с четким наложением зон опасностей. Система в первую очередь
+        создавалась для создания путей безопасной навигации сотрудников по
+        объекту с повышенной опасностью.
+      </p>
+      <br>
+      <p>
+        Навигация создается за счет использования трекинга сотрудников на
+        объекте и построения на основе полученных данных пространственной
+        модели. Для построения маршрутов, которые являются полностью
+        безопасными, привлекаются нейронные сети, многократно облегчающие весь
+        процесс.
+      </p>
+      <br>
     </div>
   </div>
 
@@ -21,7 +38,6 @@
 <style lang="scss" scoped>
   #products {
     width: 100%;
-    height: 663px;
     padding: 54px 154px;
 
     display: grid;
@@ -57,7 +73,7 @@
     }
 
     img {
-      width: 781px;
+      max-width: 781px;
       height: 519px;
 
       border-radius: 20px;
@@ -66,25 +82,29 @@
 
   @media (max-width: 600px) {
     #products {
-      padding: 10px 20px;
+      margin-top: 40px;
+      padding: 0 calc(50% - 280px);
 
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 10px;
 
       .product__title {
         font-size: 27.5px;
         line-height: 33px;
+        margin-left: 20px;
       }
 
       .product__text {
         font-size: 12px;
         line-height: 16px;
+        margin-left: 20px;
       }
 
       img {
-        width: 390px;
-        height: 259px;
+        width: 90vw;
+        height: 30vh;
+        margin-left: 20px;
       }
     }
   }

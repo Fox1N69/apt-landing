@@ -27,7 +27,7 @@
       <img src="/ac_img1.png" alt="" />
     </div>
 
-    <div class="about__card">
+    <div class="about__card-rev">
       <img src="/ac_img2.png" alt="" />
       <div class="about__card-description">
         <p>
@@ -69,7 +69,7 @@
 
 <style lang="scss" scoped>
   #aboutus {
-    height: 1619px;
+    max-height: 1619px;
     padding: 0 154px;
   }
 
@@ -116,7 +116,7 @@
 
       p {
         color: rgb(255, 255, 255);
-        font-family: Proxima Nova;
+        font-family: "Proxima";
         font-size: 20px;
         font-weight: 400;
         line-height: 28px;
@@ -128,22 +128,56 @@
 
   @media (max-width: 600px) {
     #aboutus {
-      padding: 0;
+      padding: 0 calc(50% - 280px);
+      margin-top: 50px;
+      margin-left: 20px;
+      margin-right: 20px;
+      display: block;
     }
 
     .about__title {
       font-size: 27.5px;
       line-height: 33px;
-      display: none;
     }
 
     .about__container {
-      display: none;
-      gap: 0;
+      gap: 20px;
+    }
+    .about__card-rev {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 20px;
+
+
+      .about__card-description {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        color: white;
+        p {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
     }
 
     .about__card {
-      display: none;
+      flex-direction: column;
+
+      img {
+        max-width: 100%;
+        height: 214px;
+      }
+
+      .about__card-description {
+        margin-top: 0;
+        gap: 12px;
+
+        p {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
     }
   }
 </style>

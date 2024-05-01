@@ -59,7 +59,7 @@
 <style lang="scss" scoped>
   #steck {
     width: 100%;
-    height: 659px;
+    min-height: 659px;
 
     padding: 54px 154px;
   }
@@ -170,11 +170,26 @@
       letter-spacing: 0%;
     }
   }
+  @media (max-width: 360px) {
+    .tech__list {
+      grid-column-gap: 5px !important;
+      .tech__card {
+        width: 150px; 
+      }
+    }
+
+    .capabilities__list {
+      grid-column-gap: 5px !important;
+      .card {
+        width: 150px;
+      }
+    }
+  }
 
   @media (max-width: 600px) {
     #steck {
+      margin-top: 50px;
       padding: 10px 20px;
-      height: 100vh;
     }
 
     .steck__title {
@@ -186,6 +201,11 @@
       display: grid;
       grid-template-columns: auto auto;
       grid-template-rows: auto auto auto auto;
+      grid-row-gap: 15px;
+      grid-column-gap: 25px;
+
+      .card {
+      }
     }
 
     .techsteck__title {
@@ -198,6 +218,13 @@
       display: grid;
       grid-template-columns: auto auto;
       grid-template-rows: auto auto auto;
+      grid-row-gap: 15px;
+      grid-column-gap: 25px;
+
+      .tech__card {
+      }
     }
   }
+
+  
 </style>

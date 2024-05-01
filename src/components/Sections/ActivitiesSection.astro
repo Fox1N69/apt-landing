@@ -43,7 +43,7 @@
 
 <style lang="scss" scoped>
   #activities {
-    height: 781px;
+    min-height: 781px;
     margin: 54px 154px 0 154px;
 
     display: flex;
@@ -121,14 +121,45 @@
     text-align: left;
   }
 
+  @media (max-width: 380px) {
+    #activities {
+      padding: 0 20px;
+
+    }
+
+    .activities__cards {
+      height: 368px;
+
+      display: flex;
+      gap: 190px;
+
+      .card {
+        max-width: 330px;
+        padding: 38px 32px;
+        color: #fff;
+
+        img {
+          max-width: 82px;
+          height: 82px;
+          margin-bottom: 17px;
+        }
+
+        border: 1px solid rgb(0, 155, 141);
+        border-radius: 20px;
+
+        background: rgb(28, 28, 28);
+      }
+    }
+  }
+
   @media (max-width: 600px) {
     #activities {
-      height: 1000px;
-      padding: 0 20px;
+      padding: 20px calc(50% - 280px);
       margin: 0;
     }
 
     .activities__title {
+      margin-left: 20px;
       font-size: 18px;
       line-height: 23px;
     }
@@ -144,11 +175,11 @@
 
     .activities__description {
       margin: 0;
+      margin-left: 20px;
+      margin-right: 20px;
 
       font-size: 10px;
       line-height: 14px;
     }
-
-    
   }
 </style>

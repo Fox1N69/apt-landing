@@ -66,6 +66,17 @@ const { class: className, ...rest } = Astro.props;
       letter-spacing: 0%;
       text-align: right;
     }
+
+  }
+
+  @media (max-width: 1440px) {
+    header {
+      padding: 0 100px;
+    }
+    .contacts {
+      flex-wrap: wrap;
+      align-content: center;
+    }
   }
 
   @media (max-width: 600px) {
