@@ -27,6 +27,12 @@ https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/style.min.css
 		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script>
+			import AOS from "aos";
+			import "aos/dist/aos.css"; // You can also use <link> for styles
+			// ..
+			AOS.init();
+		</script>
 	</head>
 	<body>
 		<slot />

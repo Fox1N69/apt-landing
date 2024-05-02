@@ -1,5 +1,6 @@
 ---
 const { class: className, ...rest } = Astro.props;
+import "animate.css";
 ---
 
 <header class={className} {...rest}>
@@ -12,7 +13,6 @@ const { class: className, ...rest } = Astro.props;
 
 <style lang="scss" scoped>
   @media (min-width: 1800px) {
-    
   }
 
   header {
@@ -70,7 +70,6 @@ const { class: className, ...rest } = Astro.props;
       letter-spacing: 0%;
       text-align: right;
     }
-
   }
 
   @media (max-width: 1440px) {
@@ -84,7 +83,7 @@ const { class: className, ...rest } = Astro.props;
   }
 
   @media (max-width: 600px) {
-    header { 
+    header {
       padding: 0 20px;
       margin: 0;
       height: 75px;
@@ -93,7 +92,7 @@ const { class: className, ...rest } = Astro.props;
     .logo {
       width: 65px;
       height: 65px;
-      
+
       img {
         width: 65px;
         height: 65px;

@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/partytown": "^2.0.4",
     "animate.css": "^4.1.1",
+    "aos": "^3.0.0-beta.6",
     "astro": "^4.6.3",
     "sass": "^1.75.0"
   }
