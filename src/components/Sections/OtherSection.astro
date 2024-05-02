@@ -30,7 +30,6 @@
     padding: 54px calc(50% - 606px);
     margin-bottom: 25px;
 
-
     background-image: url("banner-other.png");
   }
 
@@ -59,7 +58,7 @@
   }
 
   .other__card {
-    width: 370px;
+    max-width: 370px;
     height: 105px;
 
     margin-top: 39px;
@@ -93,6 +92,16 @@
     }
   }
 
+  @media (min-width: 600px) and (max-width: 1000px) {
+    .other__card {
+      max-width: 280px;
+    }
+
+    .other__list {
+      gap: 10px;
+    }
+  }
+
   @media (max-width: 600px) {
     #other {
       padding: 10px 20px;
@@ -103,6 +112,10 @@
     .otehr__title {
       font-size: 18px;
       line-height: 23px;
+    }
+
+    .other__card {
+      max-width: 90vw;
     }
 
     .other__list {
