@@ -11,14 +11,12 @@
         отлично себя зарекомендовал на производстве – это цифровая платформа
         «Система управления рисками».
       </p>
-      <br>
       <p>
         Это наша собственная разработка, которая предполагает оцифровку модели
         предприятия с четким наложением зон опасностей. Система в первую очередь
         создавалась для создания путей безопасной навигации сотрудников по
         объекту с повышенной опасностью.
       </p>
-      <br>
       <p>
         Навигация создается за счет использования трекинга сотрудников на
         объекте и построения на основе полученных данных пространственной
@@ -26,7 +24,6 @@
         безопасными, привлекаются нейронные сети, многократно облегчающие весь
         процесс.
       </p>
-      <br>
     </div>
   </div>
 
@@ -38,12 +35,14 @@
 <style lang="scss" scoped>
   #products {
     width: 100%;
-    padding: 54px 154px;
+    padding: 54px calc(50% - 606px);
 
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     .product__title {
+      margin-bottom: 24px;
+
       background: linear-gradient(
         138.65deg,
         rgb(0, 155, 141),
@@ -63,6 +62,12 @@
     }
 
     .product__text {
+      max-width: 511px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+
       color: rgb(255, 255, 255);
       font-family: "Proxima";
       font-size: 20px;
@@ -73,9 +78,6 @@
     }
 
     img {
-      max-width: 781px;
-      height: 519px;
-
       border-radius: 20px;
     }
   }
@@ -102,18 +104,7 @@
       }
 
       img {
-        width: 90vw;
-        height: 30vh;
         margin-left: 20px;
-      }
-    }
-  }
-
-  @media (max-width: 1440px) {
-    #products {
-      img {
-        width: 600px;
-        height: 519px;
       }
     }
   }

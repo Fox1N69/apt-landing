@@ -4,7 +4,7 @@
 
 <section id="steck">
   <h2 class="steck__title">
-    Если говорить о компетенциях команды профессионалов из «Альянс перспективных
+    Если говорить о компетенциях команды профессионалов <br> из «Альянс перспективных
     технологий», то в их число входят:
   </h2>
 
@@ -61,7 +61,7 @@
     width: 100%;
     min-height: 659px;
 
-    padding: 54px 154px;
+    padding: 54px calc(50% - 606px);
   }
 
   .steck__title {
@@ -89,7 +89,7 @@
 
     margin-top: 40px;
     display: flex;
-    gap: 57px;
+    gap: 14px;
 
     img {
       width: 43px;
@@ -97,14 +97,15 @@
     }
 
     .card {
-      width: 175px;
+      width: 155px;
       height: 159px;
+
+      padding: 25px 0;
 
       display: flex;
       flex-direction: column;
-      gap: 16px;
       align-items: center;
-      justify-content: center;
+      gap: 16px;
 
       border: 1px solid white;
       border-radius: 10px;
@@ -114,8 +115,9 @@
     }
 
     .card__text {
-      color: white;
       text-align: center;
+      color: rgb(255, 255, 255);
+      font-family: "Proxima";
     }
   }
 
@@ -145,10 +147,10 @@
 
     list-style: none;
     display: flex;
-    gap: 57px;
+    gap: 14px;
 
     .tech__card {
-      width: 175px;
+      width: 155px;
       height: 98px;
 
       border-radius: 10px;

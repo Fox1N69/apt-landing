@@ -5,12 +5,16 @@ const { class: className, ...rest } = Astro.props;
 <header class={className} {...rest}>
   <div class="logo"><img src="/logo.png" alt="" /></div>
   <div class="contacts">
-    <div class="number">+7(926)9669169</div>
+    <div class="number">+7 (926) 966 91 69</div>
     <div class="email">SIF@APT-IT.PRO</div>
   </div>
 </header>
 
 <style lang="scss" scoped>
+  @media (min-width: 1800px) {
+    
+  }
+
   header {
     background-color: #101010;
 
@@ -20,7 +24,7 @@ const { class: className, ...rest } = Astro.props;
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 138px;
+    padding: 0 calc(50% - 606px);
   }
 
   .logo {
@@ -29,16 +33,16 @@ const { class: className, ...rest } = Astro.props;
   }
 
   .contacts {
-    width: 280px;
+    width: 320px;
 
     display: flex;
     flex-direction: column;
     gap: 5px;
 
     .number {
-      align-self: flex-start;
+      align-self: flex-end;
       color: rgb(255, 255, 255);
-      font-family: var(--second-family);
+      font-family: "GraphikM";
       font-size: 30px;
       font-weight: 700;
       line-height: 55px;
@@ -59,7 +63,7 @@ const { class: className, ...rest } = Astro.props;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
-      font-family: var(--second-family);
+      font-family: "GraphikM";
       font-size: 18px;
       font-weight: 600;
       line-height: 24px;

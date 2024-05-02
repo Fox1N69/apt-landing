@@ -67,7 +67,7 @@ import "animate.css";
 		background-image: url("/banner-fhd.png");
 		background-size: cover;
 
-		padding: 120px 0 127px 113px;
+		padding: 120px calc(50% - 606px);
 	}
 
 	.banner__content {
@@ -99,7 +99,7 @@ import "animate.css";
 
 		.description {
 			color: rgb(255, 255, 255);
-			font-family: "ProximaNova";
+			font-family: "Proxima";
 			font-size: 22px;
 			font-weight: 400;
 			line-height: 32px;
@@ -114,7 +114,7 @@ import "animate.css";
 		justify-content: space-between;
 		align-items: center;
 
-		padding: 0 154px;
+		padding: 0 calc(50% - 606px);
 		background: rgb(16, 16, 16);
 
 		p {
@@ -127,12 +127,19 @@ import "animate.css";
 			text-align: left;
 		}
 
+		.name {
+			a {
+				color: gray;
+				text-decoration: none;
+			}
+		}
+
 		.contacts {
 			.number {
 				color: rgb(255, 255, 255);
-				font-family: "Graphik";
+				font-family: "GraphikM";
 				font-size: 24px;
-				font-weight: 500;
+				font-weight: 400;
 				line-height: 55px;
 				letter-spacing: 0%;
 				text-align: left;
@@ -148,7 +155,7 @@ import "animate.css";
 				-webkit-text-fill-color: transparent;
 				background-clip: text;
 				text-fill-color: transparent;
-				font-family: "Graphik";
+				font-family: "GraphikM";
 				font-size: 18px;
 				font-weight: 600;
 				line-height: 24px;
@@ -158,13 +165,7 @@ import "animate.css";
 		}
 	}
 
-	@media (max-width: 1440px)  {
-		footer { 
-			
-		}
-	}
-
-	@media (max-width: 600px) {
+@media (max-width: 600px) {
 		main {
 			display: block;
 			margin-bottom: 20px;
