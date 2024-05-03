@@ -1,11 +1,7 @@
 ---
 import "../assets/styles/_fonts.scss";
+import {SEO} from "astro-seo";
 
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -26,7 +22,12 @@ https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/style.min.css
 			href="https://cdn.rawgit.com/mfd/e7842774e037edf15919037594a79b2b/raw/665bdfc532094318449f1010323c84013d5af953/graphik.css"
 		/>
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<SEO 
+		title="Альянс перспективных технологий | Разработка и автоматизация бизнес процессов."
+		description="1. Разработка интерактивных обучающих симуляторов.
+								 2. Интеллектуальных систем на базе искуственного интелекта.
+								 3. Разработка мобильных приложений."
+		/>
 		<script>
 			import AOS from "aos";
 			import "aos/dist/aos.css"; // You can also use <link> for styles
