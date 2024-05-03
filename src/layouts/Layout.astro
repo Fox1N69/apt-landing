@@ -1,7 +1,6 @@
 ---
 import "../assets/styles/_fonts.scss";
-import {SEO} from "astro-seo";
-
+import { SEO } from "astro-seo";
 ---
 
 <!doctype html>
@@ -22,33 +21,26 @@ https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/style.min.css
 			href="https://cdn.rawgit.com/mfd/e7842774e037edf15919037594a79b2b/raw/665bdfc532094318449f1010323c84013d5af953/graphik.css"
 		/>
 		<meta name="generator" content={Astro.generator} />
-		<SEO 
-		title="Альянс перспективных технологий | Разработка и автоматизация бизнес процессов."
-		description="1. Разработка интерактивных обучающих симуляторов.
-								 2. Интеллектуальных систем на базе искуственного интелекта.
-								 3. Разработка мобильных приложений."
+		<SEO
+			title="Альянс перспективных технологий | Разработка и автоматизация бизнес процессов."
+			description="1. Разработка интерактивных обучающих симуляторов. \
+									 2. Интеллектуальных систем на базе искуственного интелекта. \
+									 3. Разработка мобильных приложений." 
 		/>
-		<script>
-			import AOS from "aos";
-			import "aos/dist/aos.css"; // You can also use <link> for styles
-			// ..
-			AOS.init();
-		</script>
 	</head>
 	<body>
 		<slot />
+		<style lang="scss" is:global>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			:root {
+				--font-family: "Proxima Nova", sans-serif;
+				--second-family: "Graphik LCG", sans-serif;
+			}
+		</style>
 	</body>
 </html>
-
-<style lang="scss" is:global>
-	* {
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
-	}
-
-	:root {
-		--font-family: "Proxima Nova", sans-serif;
-		--second-family: "Graphik LCG", sans-serif;
-	}
-</style>
