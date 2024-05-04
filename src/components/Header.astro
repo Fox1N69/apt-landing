@@ -1,10 +1,12 @@
 ---
 const { class: className, ...rest } = Astro.props;
 import "animate.css";
+import Navigation from "./Navigation.astro";
 ---
 
 <header class={className} {...rest}>
   <div class="logo"><img src="/logo.png" alt="" /></div>
+  <Navigation/>
   <div class="contacts">
     <div class="number">+7 (926) 966 91 69</div>
     <div class="email">SIF@APT-IT.PRO</div>
@@ -33,7 +35,7 @@ import "animate.css";
   }
 
   .contacts {
-    width: 320px;
+    max-width: 320px;
 
     display: flex;
     flex-direction: column;
