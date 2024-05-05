@@ -2,3 +2,132 @@
 
 ---
 
+<script>
+  const hamMenu = document.querySelector(".ham-menu");
+  const offScreenMenu = document.querySelector(".off-screen-menu");
+
+  // Слушатель события на все элементы меню
+  const menuItems = document.querySelectorAll(".menu-item a");
+  menuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      // Закрыть меню
+      hamMenu.classList.remove("active");
+      offScreenMenu.classList.remove("active");
+    });
+  });
+
+  // Остальной JavaScript код остаётся неизменным
+  hamMenu.addEventListener("click", () => {
+    hamMenu.classList.toggle("active");
+    offScreenMenu.classList.toggle("active");
+  });
+</script>
+
+<div class="off-screen-menu">
+  <ul>
+    <li class="menu-item"><a href="#activities">Направления</a></li>
+    <li class="menu-item"><a href="#aboutus">О нас</a></li>
+    <li class="menu-item"><a href="#principles">Принципы</a></li>
+    <li class="menu-item"><a href="#steck">Стек технологий</a></li>
+    <li class="menu-item"><a href="#products">Продукты</a></li>
+  </ul>
+</div>
+
+<div class="ham-menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<style lang="scss" scoped>
+  @media (min-width: 1200px) {
+    .off-screen-menu {
+      display: none;
+      .off-screen-menu.active {
+        display: none;
+      }
+    }
+
+    .ham-menu {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 635px) {
+    .off-screen-menu {
+      background-color: #1c1c1c;
+      height: 100vh;
+      width: 100%;
+      max-width: 450px;
+
+      position: fixed;
+      top: 0;
+      right: -450px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+
+      color: white;
+      font-size: 28px;
+      transition: 0.5s ease;
+      font-family: "Proxima";
+    }
+    .off-screen-menu.active {
+      touch-action: none;
+      right: 0;
+    }
+
+    /* ham menu */
+    .ham-menu {
+      height: 40px;
+      width: 30px;
+      position: relative;
+
+      span {
+        height: 3px;
+        width: 100%;
+        background-color: #ffff;
+        border-radius: 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s ease;
+      }
+    }
+
+    .ham-menu {
+      span:nth-child(1) {
+        top: 25%;
+      }
+
+      span:nth-child(3) {
+        top: 75%;
+      }
+
+      &.active {
+        span {
+          background-color: #009b8d;
+        }
+
+        span:nth-child(1) {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+        }
+
+        span:nth-child(3) {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+</style>

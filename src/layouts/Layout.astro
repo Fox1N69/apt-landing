@@ -58,24 +58,36 @@ https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/style.min.css
 			import AOS from "aos";
 			import "aos/dist/aos.css"; // You can also use <link> for styles
 			// ..
-			AOS.init();
+			AOS.init({ disable: "mobile" });
 		</script>
 		<script>
 			const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+			const isMobile = window.matchMedia("(max-width: 600px)").matches; // Adjust the screen width threshold as needed
 
-			// Добавляем обработчик события для каждой ссылки
+			// Add an event listener for each link
 			smoothScrollLinks.forEach((link) => {
 				link.addEventListener("click", (e) => {
 					e.preventDefault();
 
-					// Получаем id секции, к которой необходимо прокрутить
 					const targetId = link.getAttribute("href");
 					const targetSection = document.querySelector(targetId);
 
-					// Плавно прокручиваем к нужной секции
-					targetSection.scrollIntoView({
-						behavior: "smooth",
-					});
+					// Calculate the offset for mobile devices, keeping the default behavior for desktop
+					if (isMobile) {
+						const headerHeight = document.getElementById("header").offsetHeight;
+						const offsetPosition = targetSection.offsetTop - headerHeight;
+
+						// Smooth scroll to the target section with the adjusted offset
+						window.scrollTo({
+							top: offsetPosition,
+							behavior: "smooth",
+						});
+					} else {
+						// Smooth scroll to the target section with the default behavior for desktop
+						targetSection.scrollIntoView({
+							behavior: "smooth",
+						});
+					}
 				});
 			});
 		</script>
