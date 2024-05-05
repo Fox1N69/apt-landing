@@ -43,20 +43,7 @@
 </div>
 
 <style lang="scss" scoped>
-  @media (min-width: 1200px) {
-    .off-screen-menu {
-      display: none;
-      .off-screen-menu.active {
-        display: none;
-      }
-    }
-
-    .ham-menu {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: 635px) {
+  @media screen and (max-width: 1200px) {
     .off-screen-menu {
       background-color: #1c1c1c;
       height: 100vh;
@@ -86,6 +73,7 @@
     }
     .off-screen-menu.active {
       touch-action: none;
+      overflow: hidden;
       right: 0;
       .menu-list {
         display: flex;
