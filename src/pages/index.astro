@@ -11,222 +11,264 @@ import "animate.css";
 ---
 
 <Layout title="Альянс перспективных технологи">
-	<main>
-		<Header class="headers" />
-		<section id="banner">
-			<div class="banner__content">
-				<h1 class="title ">
-					Компания <br /> «Альянс перспективных технологий»
-				</h1>
-				<p class="description ">
-					объединила под своим началом настоящих профессионалов в своей области.
-					Команда специалистов занимается автоматизацией бизнес-процессов за
-					счет внедрения в повседневную работу современных инновационных
-					решений. Удачно подобранный кадровый состав позволяет решать проблемы
-					различного уровня сложности, среди них самая главная – делать сложные
-					и непонятные вещи максимально понятными и доступными на интуитивном
-					уровне.
-				</p>
-			</div>
-		</section>
-		<Activities />
-		<About />
-		<Principles />
-		<Steck />
-		<ProductSection />
-		<OtherSection />
-		<footer>
-			<div class="logo"><img src="/logo.png" alt="" /></div>
-			<div class="name">
-				<p>ООО «Альянс Перспективных Технологий»</p>
-				<p>ИНН 7203569998</p>
-				<a href="">Политика_конфиденцальности</a>
-			</div>
+    <main>
+        <Header />
+        <section id="banner">
+            <div class="banner__content">
+                <h1 class="title">
+                    Компания <br /> «Альянс перспективных технологий»
+                </h1>
+                <p class="description">
+                    объединила под своим началом настоящих профессионалов в
+                    своей области. Команда специалистов занимается
+                    автоматизацией бизнес-процессов за счет внедрения в
+                    повседневную работу современных инновационных решений.
+                    Удачно подобранный кадровый состав позволяет решать проблемы
+                    различного уровня сложности, среди них самая главная –
+                    делать сложные и непонятные вещи максимально понятными и
+                    доступными на интуитивном уровне.
+                </p>
+            </div>
+        </section>
+        <button onclick="scrollToTop()" id="scrollToTopButton" title="К верху"
+            ><a href="#header"><img src="arrow.png" alt="" /></a></button
+        >
+        <Activities />
+        <About />
+        <Principles />
+        <Steck />
+        <ProductSection />
+        <OtherSection />
+        <footer>
+            <div class="logo"><img src="/logo.png" alt="" /></div>
+            <div class="name">
+                <p>ООО «Альянс Перспективных Технологий»</p>
+                <p>ИНН 7203569998</p>
+                <a href="">Политика_конфиденцальности</a>
+            </div>
 
-			<div class="addres">
-				<p>625033 г. Тюмень, <br /> ул. Константина Посьета, д. 9, оф.96</p>
-			</div>
+            <div class="addres">
+                <p>
+                    625033 г. Тюмень, <br /> ул. Константина Посьета, д. 9, оф.96
+                </p>
+            </div>
 
-			<div class="contacts">
-				<div class="number">+7 (926) 966 91 69</div>
-				<div class="email">SIF@APT-IT.PRO</div>
-			</div>
-		</footer>
-	</main>
+            <div class="contacts">
+                <div class="number">+7 (926) 966 91 69</div>
+                <div class="email">SIF@APT-IT.PRO</div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- script the button for scrolling to Up -->
+    <script>
+        const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+        window.onscroll = function () {
+            showScrollToTopButton();
+        };
+
+        function showScrollToTopButton() {
+            if (
+                (document.body.scrollTop > 20 ||
+                    document.documentElement.scrollTop > 20) &&
+                screen.width >= 600
+            ) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        }
+    </script>
 </Layout>
 
 <style lang="scss">
-	main {
-		max-width: 100%;
-		background-color: #101010;
-	}
+    main {
+        max-width: 100%;
+        background-color: #101010;
+    }
 
-	#banner {
-		height: 659px;
-		width: 100%;
-		background-image: url("/banner-fhd.png");
-		background-size: cover;
+    #scrollToTopButton {
+        background-color: transparent;
+        border: none;
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
 
-		padding: 120px calc(50% - 606px);
-	}
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
 
-	.banner__content {
-		max-width: 1075.2px;
-		height: 198px;
+    #banner {
+        height: 659px;
+        width: 100%;
+        background-image: url("/banner-fhd.png");
+        background-size: cover;
 
-		color: white;
-		display: flex;
-		flex-direction: column;
-		gap: 22px;
+        padding: 120px calc(50% - 606px);
+    }
 
-		.title {
-			background: linear-gradient(
-				138.65deg,
-				rgb(0, 155, 141),
-				rgb(28, 126, 107),
-				rgb(74, 185, 163)
-			);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
-			text-fill-color: transparent;
-			font-family: "Graphik";
-			font-size: 60px;
-			line-height: 66px;
-			letter-spacing: 0%;
-			text-align: left;
-		}
+    .banner__content {
+        max-width: 1075.2px;
+        height: 198px;
 
-		.description {
-			color: rgb(255, 255, 255);
-			font-family: "Proxima";
-			font-size: 22px;
-			font-weight: 400;
-			line-height: 32px;
-			letter-spacing: 0%;
-			text-align: left;
-		}
-	}
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
 
-	footer {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
+        .title {
+            background: linear-gradient(
+                138.65deg,
+                rgb(0, 155, 141),
+                rgb(28, 126, 107),
+                rgb(74, 185, 163)
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-family: "Graphik";
+            font-size: 60px;
+            line-height: 66px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
 
-		padding: 0 calc(50% - 606px);
-		background: rgb(16, 16, 16);
+        .description {
+            color: rgb(255, 255, 255);
+            font-family: "Proxima";
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+    }
 
-		p {
-			color: rgb(255, 255, 255);
-			font-family: "Proxima";
-			font-size: 16px;
-			font-weight: 400;
-			line-height: 24px;
-			letter-spacing: 0%;
-			text-align: left;
-		}
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
 
-		.name {
-			a {
-				color: gray;
-				text-decoration: none;
-			}
-		}
+        padding: 0 calc(50% - 606px);
+        background: rgb(16, 16, 16);
 
-		.contacts {
-			.number {
-				color: rgb(255, 255, 255);
-				font-family: "GraphikM";
-				font-size: 24px;
-				font-weight: 400;
-				line-height: 55px;
-				letter-spacing: 0%;
-				text-align: left;
-			}
-			.email {
-				background: linear-gradient(
-					138.65deg,
-					rgb(0, 155, 141),
-					rgb(28, 126, 107),
-					rgb(74, 185, 163)
-				);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
-				text-fill-color: transparent;
-				font-family: "GraphikM";
-				font-size: 18px;
-				font-weight: 600;
-				line-height: 24px;
-				letter-spacing: 0%;
-				text-align: right;
-			}
-		}
-	}
+        p {
+            color: rgb(255, 255, 255);
+            font-family: "Proxima";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
 
-@media (max-width: 600px) {
-		main {
-			display: block;
-			margin-bottom: 20px;
-		}
+        .name {
+            a {
+                color: gray;
+                text-decoration: none;
+            }
+        }
 
-		#banner {
-			padding: 4.5% 20px;
-			height: 300px;
-			background: url("/banner-mobile.png");
-			background-size: cover;
-		}
+        .contacts {
+            .number {
+                color: rgb(255, 255, 255);
+                font-family: "GraphikM";
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 55px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
 
-		.banner__content {
-			.title {
-				font-size: 30px;
-				line-height: 33px;
-			}
+            .email {
+                background: linear-gradient(
+                    138.65deg,
+                    rgb(0, 155, 141),
+                    rgb(28, 126, 107),
+                    rgb(74, 185, 163)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                font-family: "GraphikM";
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 0%;
+                text-align: right;
+            }
+        }
+    }
 
-			.description {
-				font-size: 11px;
-				line-height: 16px;
-			}
-		}
+    @media (max-width: 600px) {
+        main {
+            display: block;
+        }
 
-		footer {
-			padding: 0;
+        #banner {
+            padding: 4.5% 20px;
+            height: 300px;
+            background: url("/banner-mobile.png");
+            background-size: cover;
+        }
 
-			.logo {
-				width: 42px;
-				height: 42px;
-				img {
-					width: 42px;
-					height: 42px;
-				}
-			}
+        .banner__content {
+            .title {
+                font-size: 30px;
+                line-height: 33px;
+            }
 
-			p {
-				font-size: 8px;
-				line-height: 12px;
-			}
+            .description {
+                font-size: 11px;
+                line-height: 16px;
+            }
+        }
 
-			.name {
-				a {
-					font-size: 10px;
-				}
-			}
+        footer {
+            padding: 0;
 
-			.contacts {
-				min-width: 90px;
+            .logo {
+                width: 42px;
+                height: 42px;
+                img {
+                    width: 42px;
+                    height: 42px;
+                }
+            }
 
-				.number {
-					font-size: 10px;
-					font-weight: 100;
-					line-height: 27.5px;
-				}
+            p {
+                font-size: 8px;
+                line-height: 12px;
+            }
 
-				.email {
-					font-size: 9px;
-					line-height: 12px;
-				}
-			}
-		}
-	}
+            .name {
+                a {
+                    font-size: 10px;
+                }
+            }
+
+            .contacts {
+                min-width: 90px;
+
+                .number {
+                    font-size: 10px;
+                    font-weight: 100;
+                    line-height: 27.5px;
+                }
+
+                .email {
+                    font-size: 9px;
+                    line-height: 12px;
+                }
+            }
+        }
+    }
 </style>

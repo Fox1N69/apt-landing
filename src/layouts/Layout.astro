@@ -7,7 +7,13 @@ import { SEO } from "astro-seo";
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta
+			name="description"
+			content="1. Разработка интерактивных обучающих симуляторов. \
+							 2. Интеллектуальных систем на базе искуственного интелекта. \
+							 3. Разработка мобильных приложений."
+		/>
+
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link
@@ -25,7 +31,7 @@ https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/style.min.css
 			title="Альянс перспективных технологий | Разработка и автоматизация бизнес процессов."
 			description="1. Разработка интерактивных обучающих симуляторов. \
 									 2. Интеллектуальных систем на базе искуственного интелекта. \
-									 3. Разработка мобильных приложений." 
+									 3. Разработка мобильных приложений."
 		/>
 	</head>
 	<body>
@@ -37,10 +43,41 @@ https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/style.min.css
 				box-sizing: border-box;
 			}
 
+			a {
+				text-decoration: none;
+				color: white;
+			}
+
 			:root {
 				--font-family: "Proxima Nova", sans-serif;
 				--second-family: "Graphik LCG", sans-serif;
 			}
 		</style>
+
+		<script>
+			import AOS from "aos";
+			import "aos/dist/aos.css"; // You can also use <link> for styles
+			// ..
+			AOS.init();
+		</script>
+		<script>
+			const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+
+			// Добавляем обработчик события для каждой ссылки
+			smoothScrollLinks.forEach((link) => {
+				link.addEventListener("click", (e) => {
+					e.preventDefault();
+
+					// Получаем id секции, к которой необходимо прокрутить
+					const targetId = link.getAttribute("href");
+					const targetSection = document.querySelector(targetId);
+
+					// Плавно прокручиваем к нужной секции
+					targetSection.scrollIntoView({
+						behavior: "smooth",
+					});
+				});
+			});
+		</script>
 	</body>
 </html>

@@ -8,7 +8,13 @@
     - это разработка:
   </h2>
   <div class="activities__cards">
-    <div class="card" >
+    <div
+      class="card"
+      data-aos="fade-up"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+      data-aos-delay="25"
+    >
       <img src="/lumen.png" alt="" />
       <div class="card__description">
         виртуальных тренажеров, а точнее интерактивных обучающих симуляторов,
@@ -16,15 +22,27 @@
         высоком операционном уровне;
       </div>
     </div>
-    <div class="card" >
-      <img src="/formula.png"  alt="" />
+    <div
+      class="card"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+      data-aos-delay="25"
+    >
+      <img src="/formula.png" alt="" />
       <div class="card__description">
         интеллектуальных систем на базе нейронных сетей, которые призваны
         помогать вашим сотрудникам в процессе сбора, анализа данных с целью
         прогнозирования развития ситуаций в будущем;
       </div>
     </div>
-    <div class="card" >
+    <div
+      class="card"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      data-aos-easing="linear"
+      data-aos-delay="25"
+    >
       <img src="/phone.png" alt="" />
       <div class="card__description">
         удобных и многофункциональных мобильных приложений на базе двух
@@ -107,6 +125,8 @@
     line-height: 28px;
     letter-spacing: 0%;
     text-align: left;
+
+    margin-bottom: 20px;
   }
 
   .activities__description {
@@ -125,7 +145,6 @@
   @media (max-width: 380px) {
     #activities {
       padding: 0 20px;
-
     }
 
     .activities__cards {
@@ -136,7 +155,7 @@
 
       .card {
         max-width: 330px;
-        padding: 38px 32px;
+        padding: 28px 32px;
         color: #fff;
 
         img {
@@ -149,6 +168,10 @@
         border-radius: 20px;
 
         background: rgb(28, 28, 28);
+
+        .card__description {
+          margin-bottom: 20px;
+        }
       }
     }
   }
@@ -166,8 +189,7 @@
     }
 
     .activities__cards {
-      height: 154%;
-
+      height: 150%;
       display: flex;
       flex-direction: column;
       align-items: center;

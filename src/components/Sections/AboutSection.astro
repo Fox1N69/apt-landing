@@ -5,7 +5,12 @@
 <section id="aboutus">
   <h2 class="about__title">О НАС</h2>
   <div class="about__container">
-    <div class="about__card">
+    <div
+      class="about__card"
+      data-aos="fade-left"
+      data-aos-duration="1500"
+      data-aos-delay="25"
+    >
       <div class="about__card-description">
         <p>
           Ядро компании «Альянс перспективных технологий» состоит из технических
@@ -27,7 +32,12 @@
       <img src="/ac_img1.png" alt="" />
     </div>
 
-    <div class="about__card-rev">
+    <div
+      class="about__card-rev"
+      data-aos="fade-right"
+      data-aos-duration="1500"
+      data-aos-delay="25"
+    >
       <img src="/ac_img2.png" alt="" />
       <div class="about__card-description">
         <p>
@@ -45,7 +55,12 @@
       </div>
     </div>
 
-    <div class="about__card">
+    <div
+      class="about__card"
+      data-aos="fade-left"
+      data-aos-duration="1500"
+      data-aos-delay="25"
+    >
       <div class="about__card-description">
         <p>
           Сегодня наша команда разработчиков активно занимается внедрением
@@ -72,8 +87,6 @@
     height: 1619px;
     padding: 0 calc(50% - 606px);
     padding-top: 52px;
-
-    background-color: #060606;
   }
 
   .about__title {
@@ -157,6 +170,8 @@
 
   @media (max-width: 600px) {
     #aboutus {
+      height: 100%;
+
       padding: 0 calc(50% - 280px);
       margin-top: 50px;
       margin-left: 20px;
@@ -194,7 +209,7 @@
 
       img {
         max-width: 100%;
-        height: 214px;
+        height: 282.13px;
       }
 
       .about__card-description {
