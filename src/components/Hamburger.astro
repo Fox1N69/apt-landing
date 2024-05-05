@@ -43,11 +43,14 @@
 </div>
 
 <style lang="scss" scoped>
-  .off-screen-menu {
-    display: none;
-  }
-  .ham-menu {
-    display: none;
+  @media (min-width: 1200px) {
+    .off-screen-menu {
+      display: none;
+    }
+
+    .ham-menu {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 1200px) {
